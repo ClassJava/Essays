@@ -1,5 +1,6 @@
 Linux 常用命令记录
  =
+ * cat /etc/redhat-release 查看linux 版本
  * ps -ef | grep postgres 查询系统中的postgres进程
  * kill -INT `head -1 /usr/local/pgsql/data/postmaster.pid`关闭所有进程
  * 防火墙操作（CentOS 7）
@@ -14,7 +15,7 @@ Linux 常用命令记录
     * 更新防火墙规则： firewall-cmd --reload 
     * 查看区域信息:  firewall-cmd --get-active-zones
     * 查看指定接口所属区域： firewall-cmd --get-zone-of-interface=eth0 
-    * firewall-cmd --zone=public --add-port=80/tcp --permanent（--permanent永久生效，没有此参数重启后失效）
+    * 打开一个端口：firewall-cmd --zone=public --add-port=80/tcp --permanent（--permanent永久生效，没有此参数重启后失效）
  * 服务操作
     * 启动一个服务：systemctl start firewalld.service 
     * 关闭一个服务：systemctl stop firewalld.service 
@@ -25,4 +26,7 @@ Linux 常用命令记录
     * 查看服务是否开机启动：systemctl is-enabled firewalld.service 
     * 查看已启动的服务列表：systemctl list-unit-files|grep enabled 
     * 查看启动失败的服务列表：systemctl --failed 
+  * 端口占用问题
+    * lsof -i tcp:80
+    * kill -9 1777 杀掉PID
  
