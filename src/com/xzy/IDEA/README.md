@@ -10,7 +10,8 @@ IDEA快捷键记录
 * Increase Font Size 放大字体（快捷键默认为空）
 * Down With Selection 从光标当前位置向下选取指定行数 Shift+向下箭头
 * Join Lines 合并下一行代码  Ctrl+Shift+J
-
+* Shift+Shift 搜索文件
+* Ctrl+Shift+F 全局搜索
 * 快速生成System.out.print()  sout
 * 快速生成main   psvm
 * 快速生成for   fori
